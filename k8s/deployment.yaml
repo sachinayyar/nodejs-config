@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: nodejs-login
+  name: nodejs-login
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nodejs-login
+  template:
+    metadata:
+      labels:
+        app: nodejs-login
+    spec:
+      containers:
+        - image: quay.io/sachinayyar/node-login:latest
+          imagePullPolicy: Always
+          name: node-login
+          ports:
+            - containerPort: 8080
+              protocol: TCP
+            - containerPort: 9090
+              protocol: TCP
