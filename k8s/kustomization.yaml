@@ -1,0 +1,11 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+- deployment.yaml
+- route.yaml
+- service.yaml
+- namespace.yaml
+images:
+- digest: sha256:c4917f5fc91a825ba3d0200d26b2176f5b247795af728b3692c69c915ddedf68
+  name: quay.io/sachinayyar/node-login
+  newName: quay.io/sachinayyar/node-login
