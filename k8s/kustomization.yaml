@@ -6,6 +6,6 @@ resources:
 - service.yaml
 - namespace.yaml
 images:
-- digest: sha256:49326d20e7985d1168a33b8a7a4f89e7576fccf3f95e3f945385ae7e1c7c8508
+- digest: sha256:7118b9fa55845cfdd5abf669c7f5d313e87a4f1f6a591629d11f35efacd3e411
   name: quay.io/sachinayyar/node-login
   newName: quay.io/sachinayyar/node-login:latest
